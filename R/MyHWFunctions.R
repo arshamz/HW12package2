@@ -1,11 +1,11 @@
-#' Takes the linear regression of X and Y variables and results in p-values, coefficients, and graphs of covariates.
+#' Takes the linear regression of X/Y variables and returns p-values, coefficients, and graphs of covariates.
 #'
-#' This is truly a great and much-needed function
+#' This package takes in a vector of outcomes, a matrix of covariates, and the number of rows of the independent variable. It then takes the linear regression of the given X and Y variables and returns the corresponding p-values and coefficients. The function also returns graphs of each of the covariates. 
 #'
 #' @param Y A vector of outcomes.
 #' @param X a matrix of covariates.
 #' @param sub: a list of subjects (i.e. a set of integers corresponding to rows in X).
-#' @return The sum of \code{x} and \code{y}.
+#' @return p value of \code{x}, coefficients of \code{x}, and graphs of covariates of \code{x}.
 #' @export
 #' @examples
 #' myLinearRegression(myData[,1],myData[,2:6],1:30)
