@@ -1,14 +1,16 @@
-#' Add together two numbers.
+#' Takes the linear regression of X and Y variables and results in p-values, coefficients, and graphs of covariates.
 #'
 #' This is truly a great and much-needed function
 #'
-#' @param x A number.
-#' @param y A number.
+#' @param Y A vector of outcomes.
+#' @param X a matrix of covariates.
+#' @param sub: a list of subjects (i.e. a set of integers corresponding to rows in X).
 #' @return The sum of \code{x} and \code{y}.
 #' @export
 #' @examples
-#' aGreatFunction(1, 1)
-#' aGreatFunction(10, 1)
+#' myLinearRegression(myData[,1],myData[,2:6],1:30)
+#' myLinearRegression(myData[,1],myData[,2:4],1:40)
+
 
 myLinearRegression <-  function(Y,X,sub){
   if (ncol(X) > 5) {

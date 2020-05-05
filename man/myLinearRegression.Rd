@@ -2,14 +2,16 @@
 % Please edit documentation in R/MyHWFunctions.R
 \name{myLinearRegression}
 \alias{myLinearRegression}
-\title{Add together two numbers.}
+\title{Takes the linear regression of X and Y variables and results in p-values, coefficients, and graphs of covariates.}
 \usage{
 myLinearRegression(Y, X, sub)
 }
 \arguments{
-\item{x}{A number.}
+\item{Y}{A vector of outcomes.}
 
-\item{y}{A number.}
+\item{X}{a matrix of covariates.}
+
+\item{sub:}{a list of subjects (i.e. a set of integers corresponding to rows in X).}
 }
 \value{
 The sum of \code{x} and \code{y}.
@@ -18,6 +20,6 @@ The sum of \code{x} and \code{y}.
 This is truly a great and much-needed function
 }
 \examples{
-aGreatFunction(1, 1)
-aGreatFunction(10, 1)
+myLinearRegression(myData[,1],myData[,2:6],1:30)
+myLinearRegression(myData[,1],myData[,2:4],1:40)
 }
